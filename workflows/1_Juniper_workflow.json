@@ -1,0 +1,375 @@
+{
+  "delete": false,
+  "id": 1,
+  "name": "Juniper Workflow",
+  "steps": [
+    {
+      "id": 1,
+      "title": "Start",
+      "activities": [
+        {
+          "id": 1,
+          "direction": "input",
+          "type": "text",
+          "title": "hostname",
+          "var": "in_hostname",
+          "args": ""
+        },
+        {
+          "id": 2,
+          "direction": "input",
+          "type": "text",
+          "title": "implement",
+          "var": "in_implement",
+          "args": ""
+        },
+        {
+          "id": 3,
+          "direction": "input",
+          "type": "text",
+          "title": "interface",
+          "var": "in_interface",
+          "args": ""
+        } 
+      ],
+      "allow_changes": true,
+      "allow_return": true
+    },
+    {
+      "id": 2,
+      "title": "Preparation",
+      "activities": [
+        {
+          "id": 1,
+          "direction": "callback",
+          "title": "bgp_vfr",
+          "type": "text",
+          "var":"in_bgp_vrf",
+          "args":""
+        },
+        {
+          "id": 2,
+          "direction": "callback",
+          "title": "bgp_vlan",
+          "type": "text",
+          "var":"in_bgp_vlan",
+          "args":""
+        },
+        {
+          "id": 3,
+          "direction": "callback",
+          "title": "bgp_peer_first",
+          "type": "text",
+          "var":"in_bgp_peer_first",
+          "args":""
+        },
+        {
+          "id": 4,
+          "direction": "callback",
+          "title": "bgp_peer_last",
+          "type": "text",
+          "var":"in_bgp_peer_last",
+          "args":""
+        },
+        {
+          "id": 5,
+          "direction": "callback",
+          "title": "site_domain",
+          "type": "text",
+          "var":"in_site_domain",
+          "args":""
+        },
+        {
+          "id": 6,
+          "direction": "callback",
+          "title": "core_interface",
+          "type": "text",
+          "var":"in_core_interface",
+          "args":""
+        },
+        {
+          "id": 7,
+          "direction": "callback",
+          "title": "core_name",
+          "type": "text",
+          "var":"in_core_name",
+          "args":""
+        },
+        {
+          "id": 8,
+          "direction": "callback",
+          "title": "core_password",
+          "type": "text",
+          "var":"in_core_password",
+          "args":""
+        },
+        {
+          "id": 9,
+          "direction": "callback",
+          "title": "ip",
+          "type": "text",
+          "var":"in_ip",
+          "args":""
+        },
+        {
+          "id": 10,
+          "direction": "callback",
+          "title": "hostname",
+          "type": "text",
+          "var":"in_hostname",
+          "args":""
+        },
+        {
+          "id": 11,
+          "direction": "callback",
+          "title": "site_region",
+          "type": "text",
+          "var":"in_site_region",
+          "args":""
+        },
+        {
+          "id": 12,
+          "direction": "callback",
+          "title": "site_street",
+          "type": "text",
+          "var":"in_site_street",
+          "args":""
+        },
+        {
+          "id": 13,
+          "direction": "callback",
+          "title": "site_zip",
+          "type": "text",
+          "var":"in_site_zip",
+          "args":""
+        },
+        {
+          "id": 14,
+          "direction": "callback",
+          "title": "site_city",
+          "type": "text",
+          "var":"in_site_city",
+          "args":""
+        },
+        {
+          "id": 15,
+          "direction": "callback",
+          "title": "site_type",
+          "type": "text",
+          "var":"in_site_type",
+          "args":""
+        },
+        {
+          "id": 16,
+          "direction": "callback",
+          "title": "llid",
+          "type": "text",
+          "var":"in_llid",
+          "args":""
+        },
+        {
+          "id": 17,
+          "direction": "callback",
+          "title": "address",
+          "type": "text",
+          "var":"in_address",
+          "args":""
+        },
+        {
+          "id": 18,
+          "direction": "callback",
+          "title": "unit_id",
+          "type": "text",
+          "var":"in_unit_id",
+          "args":""
+        },
+        {
+          "id": 19,
+          "direction": "callback",
+          "title": "unit_address",
+          "type": "text",
+          "var":"in_unit_address",
+          "args":""
+        }
+      ],
+      "allow_changes": true,
+      "allow_return": true
+    },
+    {
+      "id": 3,
+      "title": "Build Config",
+      "activities": [
+        {
+          "id": 1,
+          "direction": "input",
+          "title": "bgp_vfr",
+          "type": "text",
+          "var":"in_bgp_vrf",
+          "args":""
+        },
+        {
+          "id": 2,
+          "direction": "input",
+          "title": "bgp_vlan",
+          "type": "text",
+          "var":"in_bgp_vlan",
+          "args":""
+        },
+        {
+          "id": 3,
+          "direction": "input",
+          "title": "bgp_peer_first",
+          "type": "text",
+          "var":"in_bgp_peer_first",
+          "args":""
+        },
+        {
+          "id": 4,
+          "direction": "input",
+          "title": "bgp_peer_last",
+          "type": "text",
+          "var":"in_bgp_peer_last",
+          "args":""
+        },
+        {
+          "id": 5,
+          "direction": "input",
+          "title": "site_domain",
+          "type": "text",
+          "var":"in_site_domain",
+          "args":""
+        },
+        {
+          "id": 6,
+          "direction": "input",
+          "title": "core_interface",
+          "type": "text",
+          "var":"in_core_interface",
+          "args":""
+        },
+        {
+          "id": 7,
+          "direction": "input",
+          "title": "core_name",
+          "type": "text",
+          "var":"in_core_name",
+          "args":""
+        },
+        {
+          "id": 8,
+          "direction": "input",
+          "title": "core_password",
+          "type": "text",
+          "var":"in_core_password",
+          "args":""
+        },
+        {
+          "id": 9,
+          "direction": "input",
+          "title": "ip",
+          "type": "text",
+          "var":"in_ip",
+          "args":""
+        },
+        {
+          "id": 10,
+          "direction": "input",
+          "title": "hostname",
+          "type": "text",
+          "var":"in_hostname",
+          "args":""
+        },
+        {
+          "id": 11,
+          "direction": "input",
+          "title": "site_region",
+          "type": "text",
+          "var":"in_site_region",
+          "args":""
+        },
+        {
+          "id": 12,
+          "direction": "input",
+          "title": "site_street",
+          "type": "text",
+          "var":"in_site_street",
+          "args":""
+        },
+        {
+          "id": 13,
+          "direction": "input",
+          "title": "site_zip",
+          "type": "text",
+          "var":"in_site_zip",
+          "args":""
+        },
+        {
+          "id": 14,
+          "direction": "input",
+          "title": "site_city",
+          "type": "text",
+          "var":"in_site_city",
+          "args":""
+        },
+        {
+          "id": 15,
+          "direction": "input",
+          "title": "site_type",
+          "type": "text",
+          "var":"in_site_type",
+          "args":""
+        },
+        {
+          "id": 16,
+          "direction": "input",
+          "title": "llid",
+          "type": "text",
+          "var":"in_llid",
+          "args":""
+        },
+        {
+          "id": 17,
+          "direction": "input",
+          "title": "address",
+          "type": "text",
+          "var":"in_address",
+          "args":""
+        },
+        {
+          "id": 18,
+          "direction": "input",
+          "title": "unit_id",
+          "type": "text",
+          "var":"in_unit_id",
+          "args":""
+        },
+        {
+          "id": 19,
+          "direction": "input",
+          "title": "unit_address",
+          "type": "text",
+          "var":"in_unit_address",
+          "args":""
+        }
+      ],
+      "allow_changes": true,
+      "allow_return": true
+    },
+    {
+      "id": 4,
+      "title": "Prepare Router",
+      "activities": [
+      ],
+      "allow_changes": true,
+      "allow_return": true
+    },
+    {
+      "id": 5,
+      "title": "Perform Change",
+      "activities": [
+      ],
+      "allow_changes": true,
+      "allow_return": true
+    }
+  ]
+}
