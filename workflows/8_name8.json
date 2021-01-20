@@ -1,0 +1,373 @@
+{
+  "id": 8,
+  "name": "name8",
+  "steps": [
+    {
+      "allow_changes": true,
+      "id": 1,
+      "activities": [
+        {
+          "id": 1,
+          "direction": "input",
+          "args": "",
+          "title": "hostname",
+          "type": "text",
+          "var": "in_hostname"
+        },
+        {
+          "id": 2,
+          "direction": "input",
+          "args": "",
+          "title": "implement",
+          "type": "text",
+          "var": "in_implement"
+        },
+        {
+          "id": 3,
+          "direction": "input",
+          "args": "",
+          "title": "interface",
+          "type": "text",
+          "var": "in_interface"
+        }
+      ],
+      "allow_return": true,
+      "title": "Start"
+    },
+    {
+      "allow_changes": true,
+      "id": 2,
+      "activities": [
+        {
+          "id": 1,
+          "direction": "callback",
+          "args": "",
+          "title": "bgp_vfr",
+          "type": "text",
+          "var": "in_bgp_vrf"
+        },
+        {
+          "id": 2,
+          "direction": "callback",
+          "args": "",
+          "title": "bgp_vlan",
+          "type": "text",
+          "var": "in_bgp_vlan"
+        },
+        {
+          "id": 3,
+          "direction": "callback",
+          "args": "",
+          "title": "bgp_peer_first",
+          "type": "text",
+          "var": "in_bgp_peer_first"
+        },
+        {
+          "id": 4,
+          "direction": "callback",
+          "args": "",
+          "title": "bgp_peer_last",
+          "type": "text",
+          "var": "in_bgp_peer_last"
+        },
+        {
+          "id": 5,
+          "direction": "callback",
+          "args": "",
+          "title": "site_domain",
+          "type": "text",
+          "var": "in_site_domain"
+        },
+        {
+          "id": 6,
+          "direction": "callback",
+          "args": "",
+          "title": "core_interface",
+          "type": "text",
+          "var": "in_core_interface"
+        },
+        {
+          "id": 7,
+          "direction": "callback",
+          "args": "",
+          "title": "core_name",
+          "type": "text",
+          "var": "in_core_name"
+        },
+        {
+          "id": 8,
+          "direction": "callback",
+          "args": "",
+          "title": "core_password",
+          "type": "text",
+          "var": "in_core_password"
+        },
+        {
+          "id": 9,
+          "direction": "callback",
+          "args": "",
+          "title": "ip",
+          "type": "text",
+          "var": "in_ip"
+        },
+        {
+          "id": 10,
+          "direction": "callback",
+          "args": "",
+          "title": "hostname",
+          "type": "text",
+          "var": "in_hostname"
+        },
+        {
+          "id": 11,
+          "direction": "callback",
+          "args": "",
+          "title": "site_region",
+          "type": "text",
+          "var": "in_site_region"
+        },
+        {
+          "id": 12,
+          "direction": "callback",
+          "args": "",
+          "title": "site_street",
+          "type": "text",
+          "var": "in_site_street"
+        },
+        {
+          "id": 13,
+          "direction": "callback",
+          "args": "",
+          "title": "site_zip",
+          "type": "text",
+          "var": "in_site_zip"
+        },
+        {
+          "id": 14,
+          "direction": "callback",
+          "args": "",
+          "title": "site_city",
+          "type": "text",
+          "var": "in_site_city"
+        },
+        {
+          "id": 15,
+          "direction": "callback",
+          "args": "",
+          "title": "site_type",
+          "type": "text",
+          "var": "in_site_type"
+        },
+        {
+          "id": 16,
+          "direction": "callback",
+          "args": "",
+          "title": "llid",
+          "type": "text",
+          "var": "in_llid"
+        },
+        {
+          "id": 17,
+          "direction": "callback",
+          "args": "",
+          "title": "address",
+          "type": "text",
+          "var": "in_address"
+        },
+        {
+          "id": 18,
+          "direction": "callback",
+          "args": "",
+          "title": "unit_id",
+          "type": "text",
+          "var": "in_unit_id"
+        },
+        {
+          "id": 19,
+          "direction": "callback",
+          "args": "",
+          "title": "unit_address",
+          "type": "text",
+          "var": "in_unit_address"
+        }
+      ],
+      "allow_return": true,
+      "title": "Preparation"
+    },
+    {
+      "allow_changes": true,
+      "id": 3,
+      "activities": [
+        {
+          "id": 1,
+          "direction": "input",
+          "args": "",
+          "title": "bgp_vfr",
+          "type": "text",
+          "var": "in_bgp_vrf"
+        },
+        {
+          "id": 2,
+          "direction": "input",
+          "args": "",
+          "title": "bgp_vlan",
+          "type": "text",
+          "var": "in_bgp_vlan"
+        },
+        {
+          "id": 3,
+          "direction": "input",
+          "args": "",
+          "title": "bgp_peer_first",
+          "type": "text",
+          "var": "in_bgp_peer_first"
+        },
+        {
+          "id": 4,
+          "direction": "input",
+          "args": "",
+          "title": "bgp_peer_last",
+          "type": "text",
+          "var": "in_bgp_peer_last"
+        },
+        {
+          "id": 5,
+          "direction": "input",
+          "args": "",
+          "title": "site_domain",
+          "type": "text",
+          "var": "in_site_domain"
+        },
+        {
+          "id": 6,
+          "direction": "input",
+          "args": "",
+          "title": "core_interface",
+          "type": "text",
+          "var": "in_core_interface"
+        },
+        {
+          "id": 7,
+          "direction": "input",
+          "args": "",
+          "title": "core_name",
+          "type": "text",
+          "var": "in_core_name"
+        },
+        {
+          "id": 8,
+          "direction": "input",
+          "args": "",
+          "title": "core_password",
+          "type": "text",
+          "var": "in_core_password"
+        },
+        {
+          "id": 9,
+          "direction": "input",
+          "args": "",
+          "title": "ip",
+          "type": "text",
+          "var": "in_ip"
+        },
+        {
+          "id": 10,
+          "direction": "input",
+          "args": "",
+          "title": "hostname",
+          "type": "text",
+          "var": "in_hostname"
+        },
+        {
+          "id": 11,
+          "direction": "input",
+          "args": "",
+          "title": "site_region",
+          "type": "text",
+          "var": "in_site_region"
+        },
+        {
+          "id": 12,
+          "direction": "input",
+          "args": "",
+          "title": "site_street",
+          "type": "text",
+          "var": "in_site_street"
+        },
+        {
+          "id": 13,
+          "direction": "input",
+          "args": "",
+          "title": "site_zip",
+          "type": "text",
+          "var": "in_site_zip"
+        },
+        {
+          "id": 14,
+          "direction": "input",
+          "args": "",
+          "title": "site_city",
+          "type": "text",
+          "var": "in_site_city"
+        },
+        {
+          "id": 15,
+          "direction": "input",
+          "args": "",
+          "title": "site_type",
+          "type": "text",
+          "var": "in_site_type"
+        },
+        {
+          "id": 16,
+          "direction": "input",
+          "args": "",
+          "title": "llid",
+          "type": "text",
+          "var": "in_llid"
+        },
+        {
+          "id": 17,
+          "direction": "input",
+          "args": "",
+          "title": "address",
+          "type": "text",
+          "var": "in_address"
+        },
+        {
+          "id": 18,
+          "direction": "input",
+          "args": "",
+          "title": "unit_id",
+          "type": "text",
+          "var": "in_unit_id"
+        },
+        {
+          "id": 19,
+          "direction": "input",
+          "args": "",
+          "title": "unit_address",
+          "type": "text",
+          "var": "in_unit_address"
+        }
+      ],
+      "allow_return": true,
+      "title": "Build Config"
+    },
+    {
+      "allow_changes": true,
+      "id": 4,
+      "activities": [],
+      "allow_return": true,
+      "title": "Prepare Router"
+    },
+    {
+      "allow_changes": true,
+      "id": 5,
+      "activities": [],
+      "allow_return": true,
+      "title": "Perform Change"
+    }
+  ],
+  "delete": false
+}

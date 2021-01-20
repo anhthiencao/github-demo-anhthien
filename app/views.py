@@ -77,7 +77,8 @@ def get_all_workflows():
     if access_authorization() is True:
         data = {}
         for wf in listdir(WORKFLOW_DIR):
-            with open(f"{WORKFLOW_DIR}\{wf}", "r") as f:
+            path = os.path.join(WORKFLOW_DIR, wf)
+            with open(path, "r") as f:
                 result = json.load(f)
                 if result["delete"] == False:
                     name = wf.rsplit('.', 1)[0]
@@ -95,7 +96,8 @@ def get_workflow(id):
     if access_authorization() is True:
         for wf in listdir(WORKFLOW_DIR):
             if wf.startswith(f"{id}"):
-                with open(f"{WORKFLOW_DIR}\{wf}", "r") as f:
+                path = os.path.join(WORKFLOW_DIR, wf)
+                with open(path, "r") as f:
                     data = json.load(f)
                 del data["delete"]
 
@@ -110,7 +112,8 @@ def delete_workflow(id):
     if access_authorization() is True:
         for wf in listdir(WORKFLOW_DIR):
             if wf.startswith(f"{id}"):
-                with open(f"{WORKFLOW_DIR}\{wf}", "r") as f:
+                path = os.path.join(WORKFLOW_DIR, wf)
+                with open(path, "r") as f:
                     data = json.load(f)
                     data["delete"] = True
                 with open(f"{WORKFLOW_DIR}\{wf}", "w") as f:
@@ -128,7 +131,8 @@ def recover_workflow(id):
     """"Recover deleted workflows"""
     for wf in listdir(WORKFLOW_DIR):
         if wf.startswith(f"{id}"):
-            with open(f"{WORKFLOW_DIR}\{wf}", "r") as f:
+            path = os.path.join(WORKFLOW_DIR, wf)
+            with open(path, "r") as f:
                 data = json.load(f)
             if data["delete"] == True:
                 data["delete"] = False
@@ -167,9 +171,10 @@ def post_new_wf():
         result = WorkflowSchema().load(data)
         filename = "_".join((result["name"]).split())
 
-        with open(f"{WORKFLOW_DIR}\{totalFile + 1}_{filename}.json", "w") as f:
+        path = os.path.join(WORKFLOW_DIR, f'{totalFile + 1}_{filename}.json')
+        with open(path, "w") as f:
             f.close()
-        with open(f"{WORKFLOW_DIR}\{totalFile + 1}_{filename}.json", "w") as f:
+        with open(path, "w") as f:
             f.write(json.dumps(result))
             f.close()
         result.pop("delete")
@@ -191,9 +196,10 @@ def change_wf(id):
 
         for wf in listdir(WORKFLOW_DIR):
             if wf.startswith(f"{id}"):
-                with open(f"{WORKFLOW_DIR}\{wf}", "w") as f:
+                path = os.path.join(WORKFLOW_DIR, wf)
+                with open(path, "w") as f:
                     f.close()
-                with open(f"{WORKFLOW_DIR}\{wf}", "w") as f:
+                with open(path, "w") as f:
                     f.write(json.dumps(result))
                     f.close()
                 result.pop("delete")
@@ -209,7 +215,8 @@ def get_deleted_workflows():
     if access_authorization() is True:
         data = {}
         for wf in listdir(WORKFLOW_DIR):
-            with open(f"{WORKFLOW_DIR}\{wf}", "r") as f:
+            path = os.path.join(WORKFLOW_DIR, wf)
+            with open(path, "r") as f:
                 result = json.load(f)
                 if result["delete"] == True:
                     name = wf.rsplit('.', 1)[0]
