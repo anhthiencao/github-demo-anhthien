@@ -1,3 +1,38 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@anhthiencao 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+anhthiencao
+/
+github-demo-anhthien
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+github-demo-anhthien/main.py /
+
+Thien Nguyen Add main.py file
+Latest commit f1aef5c 20 minutes ago
+ History
+ 0 contributors
+50 lines (35 sloc)  1.34 KB
+  
 from flask import Flask, jsonify, request
 from marshmallow import Schema, fields, validate
 import jwt
@@ -47,4 +82,15 @@ def login():
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.2")
 
-
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
