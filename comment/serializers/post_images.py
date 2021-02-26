@@ -4,4 +4,5 @@ from ..models import PostImages
 class PostImagesSerializer(serializers.ModelSerializer):
     class Meta:
         model = PostImages
-        fields = ['post_id', 'image']
+        fields = '__all__'
+

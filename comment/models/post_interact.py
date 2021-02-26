@@ -10,3 +10,4 @@ class PostInteract(models.Model):
 
     def __str__(self):
         return f'Interact of Post {self.post_id}'
+

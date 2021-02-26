@@ -10,3 +10,4 @@ class PostAuth(models.Model):
 
     def __str__(self):
         return f'Auth of Post {self.post_id}'
+

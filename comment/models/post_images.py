@@ -8,3 +8,4 @@ class PostImages(models.Model):
 
     def __str__(self):
         return f'Images of Post {self.post_id}'
+

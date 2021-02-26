@@ -9,7 +9,8 @@ class Comment(models.Model):
     edited_at = models.DateTimeField(auto_now=True, blank=False)
     user_id = models.IntegerField(blank=False)
     post_id = models.IntegerField(blank=False)
-    parent_id = models.IntegerField(blank=False)
+    parent_id = models.IntegerField(blank=True)
 
     def __str__(self):
         return f'Comment {self.id} of Post {self.post_id}'
+

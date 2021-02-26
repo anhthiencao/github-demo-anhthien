@@ -45,3 +45,4 @@ urlpatterns = [
     path('post_images/', PostImagesListView.as_view()),
     path('post_images/<int:pk>', PostImagesDetailView.as_view()),
 ]
+
